@@ -20,12 +20,11 @@ function showPage(page) {
         btn.style.borderColor = page_colors['default'];
     });
 
-    document.querySelector(page).style.display="block";
+    document.querySelector(page).style.display= "grid";
     document.querySelector('body').style.backgroundColor = page_colors[page]
     page_btn.style.color = page_colors[page]
     page_btn.style.borderColor = page_colors[page]
 }
-
 
 function orderItem(e) {
     item = e.target;
@@ -80,8 +79,8 @@ function main() {
         btn.style.backgroundColor = 'transparent';
     });
 
-    document.querySelectorAll('form').forEach(menuItem => {
-        menuItem.style.display = 'none';
-    });
+    // document.querySelectorAll('form').forEach(menuItem => {
+    //     menuItem.style.display = 'none';
+    // });
 }
 main();

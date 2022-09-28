@@ -13,7 +13,7 @@
     <div class="split_background"></div>
 
     <header>
-        <h1 class="resto_name">Some Good Resto</h1>
+        <p class="logo">Some Good Resto</p>
         <nav class="nav">
             <button class="home_btn btn"> Home </button>
             <button class="menu_btn btn"> Menu </button>
@@ -26,129 +26,173 @@
 
     <main class="container">
         <div class="home page">
-            <img src="./resto.webp" alt="resto">
-            <p>
-                Lorem ipsum dolor sit amet
-            </p>
-            <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
-                laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
-                architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
-                sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit 
-                amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut 
-                labore et dolore magnam aliquam quaerat voluptatem.
-            </p>
+            <div class="page-section-1 page-section">
+                <p class="home-page-heading-1 home-page-heading text-container">
+                    Lorem ipsum
+                </p>
+                <div class="home-page-description text-container">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
+                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
+                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas 
+                    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit 
+                    amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut 
+                    labore et dolore magnam aliquam quaerat voluptatem.
+                </div>
+            </div>
+
+            <div class="page-section-2 page-section">
+                <div class="home-page-heading-2 home-page-heading text-container">
+                    Dolor sit amet
+                </div>
+                <img src="./resto.webp" alt="resto" class="home-page-img">
+            </div>
         </div>
 
         <div class="menu page">
-            <div class="menu_item">
-                <div class="menu_item_name"> Veg Chilly Garlic Noodles </div>
-                <div class="menu_item_rate"> Rate: 240.00</div>
-                <img src="./chilly-garlic-noodles-veg.jpg" alt="item_img" class=".menu_item_img">
-
-                <form class="menu_form" onsubmit="return false;" data-name="Veg Chilly Garlic Noodles" data-rate="240.00">
-                    <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                    <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-
-                    <label for="menu_item_quantity"> Enter quantity: </label>
-                    <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                    <button class="order_place_button"> Place order </button>
-                </form>
+            <div class="page-section-1">
+                <div class="menu-container">
+                    <div class="menu_item">
+                        <div class="menu_item_name"> Veg Chilly Garlic Noodles </div>
+                        <div class="menu_item_rate"> Rate: 240.00</div>
+                        <img src="./chilly-garlic-noodles-veg.jpg" alt="item_img" class=".menu_item_img" data-name="Veg Chilly Garlic Noodles" data-rate="240.00">
+        
+                        <!-- <form class="menu_form" onsubmit="return false;" >
+                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
+        
+                            <label for="menu_item_quantity"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                            <button class="order_place_button"> Place order </button>
+                        </form> -->
+                    </div>
+        
+                    <!-- <div class="menu_item">
+                        <div class="menu_item_name"> Creamy Four Cheese Pasta </div>
+                        <div class="menu_item_rate"> Rate: 290.00</div>
+                        <img src="./Creamy-Four-Cheese-Pastajpg.jpg" alt="item_img" class=".menu_item_img">
+        
+                        <form class="menu_form" onsubmit="return false;" data-name="Creamy Four Cheese Pasta" data-rate="290.00">
+                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
+        
+                            <label for="menu_item_quantity"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                            <button class="order_place_button"> Place order </button>
+                        </form>
+                    </div>
+        
+                    <div class="menu_item">
+                        <div class="menu_item_name"> Red Sauce Pasta </div>
+                        <div class="menu_item_rate"> Rate: 190.00</div>
+                        <img src="./red-sauce-pasta.jpg" alt="item_img" class=".menu_item_img">
+        
+                        <form class="menu_form" onsubmit="return false;" data-name="Red Sauce Pasta" data-rate="190.00">
+                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
+        
+                            <label for="menu_item_quantity"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                            <button class="order_place_button"> Place order </button>
+                        </form>
+                    </div>
+        
+                    <div class="menu_item">
+                        <div class="menu_item_name"> Veg Lasagna </div>
+                        <div class="menu_item_rate"> Rate: 240.00</div>
+                        <img src="./veg-lasagna.jpg" alt="item_img" class=".menu_item_img">
+        
+                        <form class="menu_form" onsubmit="return false;" data-name="Veg Lasagna" data-rate="240.00">
+                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
+        
+                            <label for="menu_item_quantity"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                            <button class="order_place_button"> Place order </button>
+                        </form>
+                    </div>
+        
+                    <div class="menu_item"> -->
+                        <!-- <div class="menu_item_name"> Vada Pav </div>
+                        <div class="menu_item_rate"> Rate: 60.00</div>
+                        <img src="./Vada_Pav.jpg" alt="item_img" class=".menu_item_img">
+        
+                        <form class="menu_form" onsubmit="return false;" data-name="Vada Pav" data-rate="60.00">
+                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
+        
+                            <label for="menu_item_quantity"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                            <button class="order_place_button"> Place order </button>
+                        </form>
+                    </div> -->
+                </div>
             </div>
 
-            <div class="menu_item">
-                <div class="menu_item_name"> Creamy Four Cheese Pasta </div>
-                <div class="menu_item_rate"> Rate: 290.00</div>
-                <img src="./Creamy-Four-Cheese-Pastajpg.jpg" alt="item_img" class=".menu_item_img">
+            <div class="page-section-2">
+                <form class="menu_form" onsubmit="return false;">
+                    <p>Item Name: </p>
+                    <p>Item Rate: </p>
 
-                <form class="menu_form" onsubmit="return false;" data-name="Creamy Four Cheese Pasta" data-rate="290.00">
                     <label for="menu_item_customer_name"> Enter Customer Name: </label>
                     <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
 
                     <label for="menu_item_quantity"> Enter quantity: </label>
                     <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                    <button class="order_place_button"> Place order </button>
-                </form>
-            </div>
-
-            <div class="menu_item">
-                <div class="menu_item_name"> Red Sauce Pasta </div>
-                <div class="menu_item_rate"> Rate: 190.00</div>
-                <img src="./red-sauce-pasta.jpg" alt="item_img" class=".menu_item_img">
-
-                <form class="menu_form" onsubmit="return false;" data-name="Red Sauce Pasta" data-rate="190.00">
-                    <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                    <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-
-                    <label for="menu_item_quantity"> Enter quantity: </label>
-                    <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                    <button class="order_place_button"> Place order </button>
-                </form>
-            </div>
-
-            <div class="menu_item">
-                <div class="menu_item_name"> Veg Lasagna </div>
-                <div class="menu_item_rate"> Rate: 240.00</div>
-                <img src="./veg-lasagna.jpg" alt="item_img" class=".menu_item_img">
-
-                <form class="menu_form" onsubmit="return false;" data-name="Veg Lasagna" data-rate="240.00">
-                    <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                    <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-
-                    <label for="menu_item_quantity"> Enter quantity: </label>
-                    <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                    <button class="order_place_button"> Place order </button>
-                </form>
-            </div>
-
-            <div class="menu_item">
-                <div class="menu_item_name"> Vada Pav </div>
-                <div class="menu_item_rate"> Rate: 60.00</div>
-                <img src="./Vada_Pav.jpg" alt="item_img" class=".menu_item_img">
-
-                <form class="menu_form" onsubmit="return false;" data-name="Vada Pav" data-rate="60.00">
-                    <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                    <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-
-                    <label for="menu_item_quantity"> Enter quantity: </label>
-                    <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
+                    
                     <button class="order_place_button"> Place order </button>
                 </form>
             </div>
         </div>
 
         <div class="about_us page">
-            <p>
-                The very best Resto in all of the Resto World!
-            </p>
-            <p>   
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales eros eu 
-                enim ultricies laoreet. Proin eget erat suscipit, luctus arcu sit amet, hendrerit 
-                leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque 
-                in nibh placerat, fermentum felis eu, molestie mi. Sed congue neque in orci 
-                lobortis ornare. Morbi auctor est tortor, eget tempor ante venenatis in. Mauris 
-                ut erat iaculis augue tincidunt hendrerit et id ipsum. Curabitur varius odio turpis, 
-                ultricies porta mauris dapibus et. Quisque varius nec leo auctor aliquam. Aenean nisi
-                felis, semper tristique neque rhoncus, pharetra pretium ante. Curabitur egestas 
-                scelerisque justo, id lobortis eros condimentum a. Vivamus volutpat turpis eu orci 
-                sollicitudin, suscipit fringilla risus dictum.
-            </p>
+            <div class="page-section-1">
+                <p>
+                    The very best Resto in all of the Resto World!
+                </p>
+            </div>
+
+            <div class="page-section-2">
+                <p>   
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales eros eu 
+                    enim ultricies laoreet. Proin eget erat suscipit, luctus arcu sit amet, hendrerit 
+                    leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque 
+                    in nibh placerat, fermentum felis eu, molestie mi. Sed congue neque in orci 
+                    lobortis ornare. Morbi auctor est tortor, eget tempor ante venenatis in. Mauris 
+                    ut erat iaculis augue tincidunt hendrerit et id ipsum. Curabitur varius odio turpis, 
+                    ultricies porta mauris dapibus et. Quisque varius nec leo auctor aliquam. Aenean nisi
+                    felis, semper tristique neque rhoncus, pharetra pretium ante. Curabitur egestas 
+                    scelerisque justo, id lobortis eros condimentum a. Vivamus volutpat turpis eu orci 
+                    sollicitudin, suscipit fringilla risus dictum.
+                </p>
+            </div>
         </div>
 
         <div class="contact page">
-            <p>
-                Let us know your thoughts
-            </p>
-            <p>
-                Phone: +0101010101
-            </p>
-            <p>
-                Email: someresto@email.com
-            </p>
+            <div class="page-section-1">
+                            <p>
+                                Let us know your thoughts
+                            </p>
+            </div>
+            <div class="page-section-2">
+                <p>
+                    Phone: +0101010101
+                </p>
+                <p>
+                    Email: someresto@email.com
+                </p>
+            </div>
         </div>
 
         <div class="order_summary page">
+            <div class="page-section-1">
+                <p>
+                    Your order summary will be shown here
+                </p>
+            </div>
+            <div class="page-section-2">
+                <p>You have no orders yet</p>
+            </div>
         </div>
     </main>
 </body>

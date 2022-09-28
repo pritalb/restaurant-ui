@@ -1,6 +1,9 @@
-body {
+* {
     margin: 0;
     padding: 0;
+}
+
+body {
     padding-right: 3rem;
     padding-left: 3rem;
 }
@@ -14,7 +17,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
+}
+
+.logo {
+    font-size: 2.5rem;
+    text-decoration: underline;
 }
 
 .split_background {
@@ -33,7 +41,55 @@ header {
 }
 
 .page {
-    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "section-1" "section-2";
+    height: 85vh;
+    /* gap: 5vw; */
+}
+
+.page-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20vh;
+    align-items: center;
+    gap: 2.5rem;
+    width: 90%;
+}
+
+.page-section-1 {
+    grid-template: section-1;
+    /* grid-column: 1 / 2; */
+}
+
+.page-section-2 {
+    grid-template: section-2;
+    padding-left: 6rem;
+    /* grid-column: 2 / 3; */
+    color: #FFFFFF;
+}
+
+
+.home-page-heading {
+    font-size: 3.25rem;
+}
+
+.home-page-heading-1 {
+    align-self: flex-end;
+}
+
+.home-page-heading-2 {
+    align-self: flex-start;
+}
+
+.home-page-description {
+    font-size: 1.6rem;
+}
+
+.home-page-img {
+    width: auto;
+    height: 300px;
+    align-self: flex-start;
 }
 
 .menu {
@@ -49,4 +105,17 @@ header {
 
 .menu::-webkit-scrollbar {
     display: none;
+}
+
+.btn {
+    width: 5rem;
+    height: 2rem;
+    text-decoration: none;
+    border-style: solid;
+}
+
+.text-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
 }
