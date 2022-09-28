@@ -1,38 +1,31 @@
-// menu_on = false;
-
-// function showMenu() {
-//     console.log('showing menu');
-//     document.querySelector('#menu').style.display="block";
-//     // document.querySelector('.menu_toggle').innerText = 'hide menu';
-//     menu_on = true;
-// }
-
-// function hideMenu() {
-//     console.log('hiding menu');
-//     document.querySelector('#menu').style.display="none";
-//     // document.querySelector('.menu_toggle').innerText = 'show menu';
-//     menu_on = false;
-// }
+page_colors = {
+    '.home' : '#F9B464',
+    '.menu' : '#8685EF',
+    '.about_us' : '#FF3367',
+    '.contact' : '#F9F871',
+    '.order_summary' : '#DC04FF',
+    'default' : '#FFFFFF',
+}
 
 function showPage(page) {
-    // console.log('showing menu');
+    page_btn = document.querySelector(`${page}_btn`)
+
     document.querySelectorAll('.page').forEach(page => {
         page.style.display = 'none';
     })
 
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.style.backgroundColor = 'transparent';
+        btn.style.color = page_colors['default'];
+        btn.style.borderColor = page_colors['default'];
+    });
+
     document.querySelector(page).style.display="block";
-    // document.querySelector('.menu_toggle').innerText = 'hide menu';
-    menu_on = true;
+    document.querySelector('body').style.backgroundColor = page_colors[page]
+    page_btn.style.color = page_colors[page]
+    page_btn.style.borderColor = page_colors[page]
 }
 
-
-// function menuButton() {
-//     if (menu_on) {
-//         hideMenu();
-//     } else {
-//         showMenu();
-//     }
-// }
 
 function orderItem(e) {
     item = e.target;
@@ -48,23 +41,20 @@ function placeOrder(e) {
     item_rate = parent.dataset.rate;
     quantity = parent.querySelector('.menu_item_quantity').value;
     customer = parent.querySelector('.menu_item_customer_name').value;
-    receipt_container = document.querySelector('#receipt');
+    receipt_container = document.querySelector('.order_summary');
     total_bill = quantity * item_rate;
-
-    // console.log(`target: ${item}, rate: ${item_rate}, name: ${item_name}, quantity: ${quantity}, bill: ${total_bill}`);
 
     receipt_container.innerHTML = '';
     if (total_bill == 0 || customer == '') {
         receipt_container.innerText = 'Please enter the required information';
     } else {
         receipt_container.innerText = `Customer: ${customer}, Item name: ${item_name}, price: ${item_rate}, quantity: ${quantity}, Total bill: ${total_bill}`;
+        showPage('.order_summary')
     }
-
-    parent.style.display = 'none';
 }
 
 function addEventListenersToButtons() {
-    pages = ['home', 'menu', 'about_us', 'contact']
+    pages = ['home', 'menu', 'about_us', 'contact', 'order_summary']
 
     pages.forEach(page => {
         document.querySelector(`.${page}_btn`).addEventListener('click', () => {
@@ -75,12 +65,8 @@ function addEventListenersToButtons() {
 
 
 function main() {
-    // hideMenu();
     showPage('.home');
     addEventListenersToButtons();
-    // document.querySelector('.menu_toggle').addEventListener("click", () => {
-    //     showPage('.menu');
-    // });
 
     document.querySelectorAll('.menu_item').forEach(menuItem => {
         menuItem.querySelector('img').addEventListener('click', orderItem);
@@ -88,6 +74,10 @@ function main() {
 
     document.querySelectorAll('.order_place_button').forEach(btn => {
         btn.addEventListener('click', placeOrder);
+    });
+
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.style.backgroundColor = 'transparent';
     });
 
     document.querySelectorAll('form').forEach(menuItem => {

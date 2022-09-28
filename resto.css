@@ -1,4 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
 img {
     height: 9rem;
     width: 15rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.split_background {
+    background-color: #1B1B1B;
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 100vh;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.page {
+    height: 90vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* to hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
 }

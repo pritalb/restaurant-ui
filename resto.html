@@ -10,15 +10,21 @@
     <script src="resto.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1 class="resto_name">Some Good Resto</h1>
-        <div class="nav">
-            <button class="home_btn"> Home </button>
-            <button class="menu_btn"> Menu </button>
-            <button class="about_us_btn"> About Us </button>
-            <button class="contact_btn"> Contact </button>
-        </div>
+    <div class="split_background"></div>
 
+    <header>
+        <h1 class="resto_name">Some Good Resto</h1>
+        <nav class="nav">
+            <button class="home_btn btn"> Home </button>
+            <button class="menu_btn btn"> Menu </button>
+            <button class="about_us_btn btn"> About Us </button>
+            <button class="contact_btn btn"> Contact </button>
+            <button class="order_summary_btn btn"> Order </button>
+        </nav>
+    </header>
+
+
+    <main class="container">
         <div class="home page">
             <img src="./resto.webp" alt="resto">
             <p>
@@ -142,8 +148,8 @@
             </p>
         </div>
 
-        <div id="receipt">
+        <div class="order_summary page">
         </div>
-    </div>
+    </main>
 </body>
 </html>
