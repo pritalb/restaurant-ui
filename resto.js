@@ -82,7 +82,7 @@ function addEventListenersToButtons() {
 
 
 function main() {
-    showPage('.menu');
+    showPage('.home');
     addEventListenersToButtons();
 
     document.querySelectorAll('.menu-item').forEach(menuItem => {
