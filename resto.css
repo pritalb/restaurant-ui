@@ -4,7 +4,7 @@
 }
 
 body {
-    padding-right: 3rem;
+    padding-right: 6rem;
     padding-left: 3rem;
 }
 
@@ -37,7 +37,9 @@ header {
 
 .nav {
     display: flex;
-    gap: 1rem;
+    width: 35%;
+    /* gap: 1rem; */
+    justify-content: space-between;
 }
 
 .page {
@@ -45,7 +47,6 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "section-1" "section-2";
     height: 85vh;
-    /* gap: 5vw; */
 }
 
 .page-section {
@@ -59,13 +60,11 @@ header {
 
 .page-section-1 {
     grid-template: section-1;
-    /* grid-column: 1 / 2; */
 }
 
 .page-section-2 {
     grid-template: section-2;
     padding-left: 6rem;
-    /* grid-column: 2 / 3; */
     color: #FFFFFF;
 }
 
@@ -92,19 +91,93 @@ header {
     align-self: flex-start;
 }
 
-.menu {
+.menu-container {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
+    gap: 40px;
 
     /* to hide scrollbar */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.menu::-webkit-scrollbar {
+.menu-container::-webkit-scrollbar {
     display: none;
+}
+
+.menu-item {
+    display: flex;
+    border: solid;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 25px;
+    gap: 20px;
+}
+
+.menu-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item-name {
+    font-size: 32px;
+}
+
+.menu-item-description {
+    display: flex;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.menu_item_img {
+    width: 150px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border: solid;
+}
+
+.menu-form {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+}
+
+.menu-form-input-field {
+    height: 24px;
+    border: solid;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+.menu-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-form-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.order_place_button {
+    height: 40px !important;
+    width: 120px !important;
+    padding: 5px;
+    align-self: flex-end;
+}
+
+.section-heading-big {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 92px;
+    align-self: flex-end;
 }
 
 .btn {
@@ -118,4 +191,31 @@ header {
     display: flex;
     flex-wrap: wrap;
     text-align: justify;
+}
+
+.about-us-text {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.info-field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-field-label {
+    font-size: 28px;
+}
+
+.label-mid {
+    font-size: 18px;
+}
+
+.text-mid {
+    font-size: 24px;
+}
+
+.info-field-text {
+    font-size: 42px;
 }

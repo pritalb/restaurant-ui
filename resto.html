@@ -27,9 +27,9 @@
     <main class="container">
         <div class="home page">
             <div class="page-section-1 page-section">
-                <p class="home-page-heading-1 home-page-heading text-container">
+                <div class="home-page-heading-1 home-page-heading text-container">
                     Lorem ipsum
-                </p>
+                </div>
                 <div class="home-page-description text-container">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque 
                     laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi 
@@ -50,39 +50,35 @@
         </div>
 
         <div class="menu page">
-            <div class="page-section-1">
+            <div class="page-section-1 page-section">
                 <div class="menu-container">
-                    <div class="menu_item">
-                        <div class="menu_item_name"> Veg Chilly Garlic Noodles </div>
-                        <div class="menu_item_rate"> Rate: 240.00</div>
-                        <img src="./chilly-garlic-noodles-veg.jpg" alt="item_img" class=".menu_item_img" data-name="Veg Chilly Garlic Noodles" data-rate="240.00">
-        
-                        <!-- <form class="menu_form" onsubmit="return false;" >
-                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-        
-                            <label for="menu_item_quantity"> Enter quantity: </label>
-                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                            <button class="order_place_button"> Place order </button>
-                        </form> -->
+                    <div class="menu-item">
+                        <img src="./chilly-garlic-noodles-veg.jpg" alt="item_img" class="menu_item_img" data-name="Veg Chilly Garlic Noodles" data-rate="240.00">
+
+                        <div class="menu-item-info">
+                            <div class="menu-item-name"> Veg Chilly Garlic Noodles </div>
+                            <div class="menu-item-description"> 
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <img src="./Creamy-Four-Cheese-Pastajpg.jpg" alt="item_img" class="menu_item_img" data-name="Creamy Four Cheese Pasta" data-rate="290.00">
+
+                        <div class="menu-item-info">
+                            <div class="menu-item-name"> Creamy Four Cheese Pasta </div>
+                            <div class="menu-item-description"> 
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore 
+                                veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            </div>
+                        </div>
                     </div>
         
                     <!-- <div class="menu_item">
-                        <div class="menu_item_name"> Creamy Four Cheese Pasta </div>
-                        <div class="menu_item_rate"> Rate: 290.00</div>
-                        <img src="./Creamy-Four-Cheese-Pastajpg.jpg" alt="item_img" class=".menu_item_img">
-        
-                        <form class="menu_form" onsubmit="return false;" data-name="Creamy Four Cheese Pasta" data-rate="290.00">
-                            <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                            <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-        
-                            <label for="menu_item_quantity"> Enter quantity: </label>
-                            <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                            <button class="order_place_button"> Place order </button>
-                        </form>
-                    </div>
-        
-                    <div class="menu_item">
                         <div class="menu_item_name"> Red Sauce Pasta </div>
                         <div class="menu_item_rate"> Rate: 190.00</div>
                         <img src="./red-sauce-pasta.jpg" alt="item_img" class=".menu_item_img">
@@ -95,9 +91,9 @@
                             <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
                             <button class="order_place_button"> Place order </button>
                         </form>
-                    </div>
+                    </div> -->
         
-                    <div class="menu_item">
+                    <!-- <div class="menu_item">
                         <div class="menu_item_name"> Veg Lasagna </div>
                         <div class="menu_item_rate"> Rate: 240.00</div>
                         <img src="./veg-lasagna.jpg" alt="item_img" class=".menu_item_img">
@@ -110,10 +106,10 @@
                             <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
                             <button class="order_place_button"> Place order </button>
                         </form>
-                    </div>
+                    </div> -->
         
-                    <div class="menu_item"> -->
-                        <!-- <div class="menu_item_name"> Vada Pav </div>
+                    <!-- <div class="menu_item">
+                        <div class="menu_item_name"> Vada Pav </div>
                         <div class="menu_item_rate"> Rate: 60.00</div>
                         <img src="./Vada_Pav.jpg" alt="item_img" class=".menu_item_img">
         
@@ -129,31 +125,39 @@
                 </div>
             </div>
 
-            <div class="page-section-2">
-                <form class="menu_form" onsubmit="return false;">
-                    <p>Item Name: </p>
-                    <p>Item Rate: </p>
+            <div class="page-section-2 page-section">
+                <form class="menu-form" onsubmit="return false;">
+                    <div class="menu-form-heading-container">
+                        <div class="menu-form-heading info-field-text"> Item Name: Veg Chilly Garlic Noodles </div>
+                        <div class="text-container text-mid"> Item Rate: 240 </div>
+                    </div>
 
-                    <label for="menu_item_customer_name"> Enter Customer Name: </label>
-                    <input type="text" class="menu_item_customer_name" name="menu_item_customer_name">
-
-                    <label for="menu_item_quantity"> Enter quantity: </label>
-                    <input type="number" name="menu_item_quantity" class="menu_item_quantity" value="0.00" min="0.00">
-                    
-                    <button class="order_place_button"> Place order </button>
+                    <div class="menu-form-field-container">
+                        <div class="menu-form-field">
+                            <label for="menu_item_customer_name" class="label-mid"> Enter Customer Name: </label>
+                            <input type="text" class="menu_item_customer_name menu-form-input-field" name="menu_item_customer_name">
+                        </div>
+    
+                        <div class="menu-form-field">
+                            <label for="menu_item_quantity" class="label-mid"> Enter quantity: </label>
+                            <input type="number" name="menu_item_quantity" class="menu_item_quantity menu-form-input-field" value="0" min="0">
+                        </div>
+    
+                        <button class="order_place_button btn"> Place order </button>
+                    </div>
                 </form>
             </div>
         </div>
 
         <div class="about_us page">
-            <div class="page-section-1">
-                <p>
+            <div class="page-section-1 page-section">
+                <div class="section-heading-big">
                     The very best Resto in all of the Resto World!
-                </p>
+                </div>
             </div>
 
-            <div class="page-section-2">
-                <p>   
+            <div class="page-section-2 page-section">
+                <div class="about-us-text text-container">   
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales eros eu 
                     enim ultricies laoreet. Proin eget erat suscipit, luctus arcu sit amet, hendrerit 
                     leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque 
@@ -164,34 +168,46 @@
                     felis, semper tristique neque rhoncus, pharetra pretium ante. Curabitur egestas 
                     scelerisque justo, id lobortis eros condimentum a. Vivamus volutpat turpis eu orci 
                     sollicitudin, suscipit fringilla risus dictum.
-                </p>
+                </div>
             </div>
         </div>
 
         <div class="contact page">
-            <div class="page-section-1">
-                            <p>
-                                Let us know your thoughts
-                            </p>
+            <div class="page-section-1 page-section">
+                <div class="section-heading-big">
+                    Let us know your thoughts
+                </div>
             </div>
-            <div class="page-section-2">
-                <p>
-                    Phone: +0101010101
-                </p>
-                <p>
-                    Email: someresto@email.com
-                </p>
+
+            <div class="page-section-2 page-section">
+                <div class="info-field-container">
+                    <div class="info-field">
+                        <label for="email" class="info-field-label"> Email: </label>
+                        <div class="text-container info-field-text" name="email"> someresto@email.com </div>
+                    </div>
+    
+                    <div class="info-field">
+                        <label for="phone" class="info-field-label"> Phone: </label>
+                        <div class="text-container info-field-text" name="phone"> +500610101010101 </div>
+                    </div>
+    
+                    <div class="info-field">
+                        <label for="address" class="info-field-label"> Address </label>
+                        <div class="text-container info-field-text" name="address"> 01, Some Place, Some City, Mars </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="order_summary page">
-            <div class="page-section-1">
-                <p>
+            <div class="page-section-1 page-section">
+                <div class="text-container">
                     Your order summary will be shown here
-                </p>
+                </div>
             </div>
-            <div class="page-section-2">
-                <p>You have no orders yet</p>
+            <div class="page-section-2 page-section">
+                <div class="text-container">You have no orders yet</div>
             </div>
         </div>
     </main>
