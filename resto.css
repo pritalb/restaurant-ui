@@ -145,7 +145,7 @@ header {
     gap: 54px;
 }
 
-.menu-form-input-field {
+.menu-form-input-field, .menu-form-input-field:focus {
     height: 24px;
     width: 560px;
     border: solid;
@@ -233,7 +233,7 @@ header {
 }
 
 .text-mid {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .info-field-text {

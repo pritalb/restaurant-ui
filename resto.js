@@ -49,30 +49,16 @@ function orderItem(e) {
     target.style.borderColor = page_colors['default']
     parent.style.color = page_colors['default']
     parent.style.borderColor = page_colors['default']
-    // parent = item.parentNode;
-
-    // parent.querySelector('form').style.display = 'block';
 }
 
 function placeOrder(e) {
     item = e.target;
     parent = item.parentNode;
-    // item_name = parent.querySelector('.menu-form-heading').innerText;
-    // item_rate = parent.querySelector('.menu-form-item-rate').innerText;
     quantity = parent.querySelector('.menu_item_quantity').value;
     customer = parent.querySelector('.menu_item_customer_name').value;
-    // receipt_container = document.querySelector('.order_summary');
     total_bill = quantity * item_rate;
 
     console.log(`customer: ${customer}, item: ${item_name}, rate: ${item_rate}, quantity: ${quantity}, total bill: ${total_bill}`)
-
-    // receipt_container.innerHTML = '';
-    // if (total_bill == 0 || customer == '') {
-    //     receipt_container.innerText = 'Please enter the required information';
-    // } else {
-    //     receipt_container.innerText = `Customer: ${customer}, Item name: ${item_name}, price: ${item_rate}, quantity: ${quantity}, Total bill: ${total_bill}`;
-    //     showPage('.order_summary')
-    // }
 
     document.querySelector('.order-summary-greeting-1').innerText = 'Thank You!';
     document.querySelector('.order-summary-greeting-2').innerText = 'Please do business with us again.';
@@ -110,9 +96,5 @@ function main() {
     document.querySelectorAll('.btn').forEach(btn => {
         btn.style.backgroundColor = 'transparent';
     });
-
-    // document.querySelectorAll('form').forEach(menuItem => {
-    //     menuItem.style.display = 'none';
-    // });
 }
 main();
