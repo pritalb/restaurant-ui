@@ -5,7 +5,11 @@ page_colors = {
     '.contact' : '#F9F871',
     '.order_summary' : '#DC04FF',
     'default' : '#FFFFFF',
+    'default-dark' : '#2B2B2B',
 }
+
+item_name = ''
+item_rate = 0
 
 function showPage(page) {
     page_btn = document.querySelector(`${page}_btn`)
@@ -27,29 +31,57 @@ function showPage(page) {
 }
 
 function orderItem(e) {
-    item = e.target;
-    parent = item.parentNode;
+    target = e.target;
+    parent = target.parentElement;
+    item_name = target.dataset.name
+    item_rate = target.dataset.rate
 
-    parent.querySelector('form').style.display = 'block';
+    document.querySelector('.menu-form-heading').innerText = item_name
+    document.querySelector('.menu-form-item-rate').innerText = item_rate
+    
+    document.querySelectorAll('.menu-item').forEach(menuItem => {
+        menuItem.style.color = page_colors['default-dark']
+        menuItem.style.borderColor = page_colors['default-dark']
+        menuItem.querySelector('img').style.borderColor = page_colors['default-dark'];
+    });
+
+
+    target.style.borderColor = page_colors['default']
+    parent.style.color = page_colors['default']
+    parent.style.borderColor = page_colors['default']
+    // parent = item.parentNode;
+
+    // parent.querySelector('form').style.display = 'block';
 }
 
 function placeOrder(e) {
     item = e.target;
     parent = item.parentNode;
-    item_name = parent.dataset.name;
-    item_rate = parent.dataset.rate;
+    // item_name = parent.querySelector('.menu-form-heading').innerText;
+    // item_rate = parent.querySelector('.menu-form-item-rate').innerText;
     quantity = parent.querySelector('.menu_item_quantity').value;
     customer = parent.querySelector('.menu_item_customer_name').value;
-    receipt_container = document.querySelector('.order_summary');
+    // receipt_container = document.querySelector('.order_summary');
     total_bill = quantity * item_rate;
 
-    receipt_container.innerHTML = '';
-    if (total_bill == 0 || customer == '') {
-        receipt_container.innerText = 'Please enter the required information';
-    } else {
-        receipt_container.innerText = `Customer: ${customer}, Item name: ${item_name}, price: ${item_rate}, quantity: ${quantity}, Total bill: ${total_bill}`;
-        showPage('.order_summary')
-    }
+    console.log(`customer: ${customer}, item: ${item_name}, rate: ${item_rate}, quantity: ${quantity}, total bill: ${total_bill}`)
+
+    // receipt_container.innerHTML = '';
+    // if (total_bill == 0 || customer == '') {
+    //     receipt_container.innerText = 'Please enter the required information';
+    // } else {
+    //     receipt_container.innerText = `Customer: ${customer}, Item name: ${item_name}, price: ${item_rate}, quantity: ${quantity}, Total bill: ${total_bill}`;
+    //     showPage('.order_summary')
+    // }
+
+    document.querySelector('.order-summary-greeting-1').innerText = 'Thank You!';
+    document.querySelector('.order-summary-greeting-2').innerText = 'Please do business with us again.';
+    document.querySelector('.order-summary-customer-name').innerText = `Customer Name: ${customer}`;
+    document.querySelector('.order-summary-item').innerText = `Item: ${item_name}`;
+    document.querySelector('.order-summary-rate').innerText =  `Rate: ${item_rate}`;
+    document.querySelector('.order-summary-quantity').innerText = `Quantity: ${quantity}`;
+    document.querySelector('.order-summary-total').innerText = `Total Amount: ${total_bill}`;
+    showPage('.order_summary');
 }
 
 function addEventListenersToButtons() {
@@ -67,7 +99,7 @@ function main() {
     showPage('.menu');
     addEventListenersToButtons();
 
-    document.querySelectorAll('.menu_item').forEach(menuItem => {
+    document.querySelectorAll('.menu-item').forEach(menuItem => {
         menuItem.querySelector('img').addEventListener('click', orderItem);
     });
 

@@ -147,6 +147,7 @@ header {
 
 .menu-form-input-field {
     height: 24px;
+    width: 560px;
     border: solid;
     border-color: #FFFFFF;
     color: #FFFFFF;
@@ -173,10 +174,29 @@ header {
     align-self: flex-end;
 }
 
+.order-summary-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    gap: 15px;
+    width: 100%;
+}
+
+.order-summary-greeting-1 {
+    align-self: flex-start !important;
+}
+
 .section-heading-big {
     display: flex;
     flex-wrap: wrap;
     font-size: 92px;
+    align-self: flex-end;
+}
+
+.section-heading-mid {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 64px;
     align-self: flex-end;
 }
 
